@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "MuliBold";
+  src: url(../font/Muli/Muli-Bold.ttf);
+}
+@font-face {
+  font-family: "MuliLight";
+  src: url(../font/Muli/Muli-Light.ttf);
+}
+@font-face {
+  font-family: "Muli";
+  src: url(../font/Muli/Muli.ttf);
+}
+@font-face {
+  font-family: "Sacramento";
+  src: url(../font/Sacramento/Sacramento.ttf);
+}
+.banner-first {
+  background: url(../imgs/bannerFirst/bannerFirst.png) no-repeat top/cover;
+}
+.banner-first__block {
+  height: 100%;
+  color: #FFFFFF;
+}
+.banner-first__title {
+  position: relative;
+  margin: auto;
+  top: calc(var(--index) * 6.2);
+  max-width: calc(var(--index) * 18.7);
+  width: 100%;
+}
+.banner-first__title > h1 {
+  text-transform: uppercase;
+  font-size: calc(var(--index) * 4.5);
+  line-height: calc(var(--index) * 4.5);
+  letter-spacing: calc(var(--index) * 0.2);
+}
+.banner-first__title > p {
+  padding-left: calc(var(--index) * 0.32);
+}
+.banner-first__title > p:nth-child(1) {
+  font-size: calc(var(--index) * 1.4);
+  line-height: calc(var(--index) * 1.4);
+}
+.banner-first__title > p:nth-child(3) {
+  font-size: calc(var(--index) * 2.25);
+  line-height: calc(var(--index) * 2.25);
+}
+.banner-first__desc {
+  position: relative;
+  left: 7.5%;
+  bottom: calc(var(--index) * -12);
+  max-width: calc(var(--index) * 21);
+  padding-top: calc(var(--index) * 0.5);
+}
+.banner-first__desc > p {
+  font-size: calc(var(--index) * 1);
+}
+.banner-first__desc::after {
+  position: absolute;
+  content: "";
+  width: calc(var(--index) * 6);
+  height: 2%;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+}
+.banner-first__desc > div {
+  display: flex;
+  justify-content: space-between;
+  width: calc(var(--index) * 4);
+  padding-top: calc(var(--index) * 0.5);
+}
+.banner-first__desc > div > img {
+  width: calc(var(--index) * 1);
+}
+
+.banner-second {
+  background: url(../imgs/bannerSecond/bannerSecond.png) no-repeat center/cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.banner-second__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: calc(var(--index) * 9);
+  background-color: #FFFFFF;
+}
+.banner-second__title {
+  position: relative;
+  bottom: calc(var(--index) * 6.2);
+  left: 7.5%;
+}
+.banner-second__title > h1 {
+  font-family: "Muli";
+  font-weight: 400;
+  font-size: calc(var(--index) * 4.5);
+  line-height: calc(var(--index) * 5);
+}
+.banner-second__title > p {
+  font-family: "Sacramento";
+  font-size: calc(var(--index) * 4.25);
+  line-height: calc(var(--index) * 4.25);
+  padding-left: calc(var(--index) * 0.32);
+}
+.banner-second__desc {
+  display: flex;
+}
+.banner-second__desc > div {
+  text-align: center;
+  max-width: calc(var(--index) * 9);
+  width: 100%;
+  margin: 0 calc(var(--index) * 1.5) 0 0;
+}
+.banner-second__desc > div > img {
+  width: calc(var(--index) * 1.5);
+}
+.banner-second__desc > div > h3 {
+  text-transform: uppercase;
+  margin: 0 0 calc(var(--index) * 0.2) 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+}
+
+html {
+  font-family: "MuliLight";
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+h1, h2, h3 {
+  font-family: "MuliBold";
+}
+
+.banner {
+  height: 100vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .banner-second__block {
+    flex-direction: column;
+    align-items: flex-start;
+    height: calc(var(--index) * 16);
+  }
+  .banner-second__title {
+    height: calc(var(--index) * 3);
+  }
+  .banner-second__desc {
+    margin: auto;
+  }
+  .banner-second__desc > div:nth-child(3) {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner-first {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../imgs/bannerFirst/bannerFirst2.png) no-repeat right/cover;
+  }
+  .banner-first__desc {
+    left: 0%;
+  }
+  .banner-first__block {
+    height: calc(var(--index) * 45);
+  }
+  .banner-second__block {
+    height: calc(var(--index) * 20);
+  }
+  .banner-second__desc {
+    flex-direction: column;
+  }
+  .banner-second__desc > div {
+    margin: 0px !important;
+    max-width: calc(var(--index) * 15);
+  }
+  .banner-second__desc > div:nth-child(2), .banner-second__desc > div:nth-child(3) {
+    display: none;
+  }
+  .banner-second__desc > div > img {
+    width: calc(var(--index) * 2.5);
+  }
+}
+@media screen and (max-width: 425px) {
+  .banner-second__block {
+    height: calc(var(--index) * 25);
+  }
+}/*# sourceMappingURL=style.css.map */

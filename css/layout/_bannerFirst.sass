@@ -1,0 +1,50 @@
+.banner 
+    &-first
+        background: url(../imgs/bannerFirst/bannerFirst.png)  no-repeat top / cover
+        &__block
+            height: 100%
+            color: $primary
+        &__title
+            position: relative
+            margin: auto
+            top: calc(var(--index) * 6.2)
+            max-width: calc(var(--index) * 18.7)
+            width: 100%  
+            & > h1
+                text-transform: uppercase
+                font-size: calc(var(--index) * 4.5)
+                line-height: calc(var(--index) * 4.5)
+                letter-spacing: calc(var(--index) * 0.2)
+            & > p
+                padding-left: calc(var(--index) * 0.32)
+                &:nth-child(1)
+                    font-size: calc(var(--index) * 1.4)
+                    line-height: calc(var(--index) * 1.4)
+                &:nth-child(3) 
+                    font-size: calc(var(--index) * 2.25)
+                    line-height: calc(var(--index) * 2.25)
+        &__desc
+            position: relative
+            left: 7.5%
+            bottom: calc(var(--index) * -12)
+            max-width: calc(var(--index) * 21) 
+            padding-top: calc(var(--index) * 0.5)
+            & > p
+                font-size: calc(var(--index) * 1)
+            &::after
+                position: absolute
+                content: ''
+                width: calc(var(--index) * 6)
+                height: 2%
+                top: 0
+                left: 0
+                background-color: $primary
+            & > div
+                display: flex
+                justify-content: space-between
+                width: calc(var(--index) * 4)
+                padding-top: calc(var(--index) * 0.5)
+                & > img
+                    width: calc(var(--index) * 1)
+
+

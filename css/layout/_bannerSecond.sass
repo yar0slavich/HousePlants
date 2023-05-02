@@ -1,0 +1,39 @@
+.banner
+    &-second
+        background: url(../imgs/bannerSecond/bannerSecond.png)  no-repeat center / cover
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        &__block
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            height: calc(var(--index) * 9)
+            background-color: $primary
+        &__title
+            position: relative
+            bottom: calc(var(--index) * 6.2)
+            left: 7.5%
+            & > h1
+                font-family: 'Muli'
+                font-weight: 400
+                font-size: calc(var(--index) * 4.5)
+                line-height: calc(var(--index) * 5)
+            & > p
+                font-family: 'Sacramento'
+                font-size: calc(var(--index) * 4.25)
+                line-height: calc(var(--index) * 4.25)
+                padding-left: calc(var(--index) * 0.32)
+        &__desc
+            display: flex
+            & > div
+                text-align: center
+                max-width: calc(var(--index) * 9)
+                width: 100%
+                margin: 0 calc(var(--index) * 1.5) 0 0
+                & > img
+                    width: calc(var(--index) * 1.5)
+                & > h3
+                    text-transform: uppercase
+                    margin: 0 0 calc(var(--index) * 0.2) 0
